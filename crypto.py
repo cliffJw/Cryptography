@@ -11,12 +11,13 @@ import main
 class Cryptor(QMainWindow):
     def __init__(self):
         super(Cryptor, self).__init__()
-        uic.loadUi('ui_d.ui', self)
+        uic.loadUi('gui_design.ui', self)
         self.setWindowTitle('Brian_Cliff')
         self.encrypt.clicked.connect(self.encrypty)
         self.decrypt.clicked.connect(self.decrypty)
         self.file_upload.clicked.connect(self.attach_file)
         self.clear.clicked.connect(self.clear_text)
+        self.save.clicked.connect(self.saveFile)
     # Encryption method
     def encrypty(self):
         self.plain = self.text.toPlainText()
@@ -45,6 +46,18 @@ class Cryptor(QMainWindow):
         else:
             # change: Removed about
             QMessageBox.about(self,"Decryption status", "Nothing to decrypt")
+    
+    def openfile(self, fpath):
+        with open(fpath, "r") as file:
+        # read all file data
+            file_data = file.read()
+        self.text.appendPlainText(file_data)
+    def saveFile(self):
+        file_saved = QtWidgets.QFileDialog.getSaveFileName(None, 'SaveTextfile', '/', "Text Files (*.txt)")
+        text_to_save = self.text.toPlainText()
+        if file_saved[0]:
+            with open(file_saved[0], 'w') as file:
+                file.write(text_to_save)
   
        
     def attach_file(self):
@@ -55,15 +68,17 @@ class Cryptor(QMainWindow):
             try:
                 self.filename=fileName
                 self.path.setText(fileName)
+                self.openfile(fileName)
+
             except:
                 return None
     
     
     def clear_text(self):
-        beta=self.Text.toPlainText()
-        alpha=self.path.Text()
+        beta=self.text.toPlainText()
+        alpha=self.path.text()
         if beta !='':
-            self.Text.clear()
+            self.text.clear()
         elif alpha!='':
             self.path.clear()
         else:
