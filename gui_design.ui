@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>994</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="1" column="0">
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="title">
+       <string/>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_10">
+       <item row="0" column="0" colspan="2">
+        <widget class="QLabel" name="label">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(180, 188, 255);
+font: italic 48pt &quot;Monotype Corsiva&quot;;</string>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;NIFTY CRYPTOR&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QGroupBox" name="groupBox_4">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_9">
+          <item row="0" column="0">
+           <widget class="QGroupBox" name="groupBox_3">
+            <property name="title">
+             <string/>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_8">
+             <item row="0" column="0">
+              <widget class="QGroupBox" name="type">
+               <property name="title">
+                <string/>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_5">
+                <item row="0" column="0">
+                 <widget class="QRadioButton" name="text_2">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(150,230, 240);
+font: italic 14pt &quot;Californian FB&quot;;
+</string>
+                  </property>
+                  <property name="text">
+                   <string>Text</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QRadioButton" name="file">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(150,230, 240);
+font: italic 14pt &quot;Californian FB&quot;;
+</string>
+                  </property>
+                  <property name="text">
+                   <string>File</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QGroupBox" name="service">
+               <property name="title">
+                <string/>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_3">
+                <item row="0" column="0">
+                 <widget class="QRadioButton" name="cryptography">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(150,230, 240);
+font: italic 14pt &quot;Californian FB&quot;;
+</string>
+                  </property>
+                  <property name="text">
+                   <string>Cryptography</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QRadioButton" name="hash">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(150,230, 240);
+font: italic 14pt &quot;Californian FB&quot;;
+</string>
+                  </property>
+                  <property name="text">
+                   <string>Hashing</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QGroupBox" name="groupBox_6">
+               <property name="title">
+                <string/>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_6">
+                <item row="0" column="0">
+                 <widget class="QPushButton" name="file_upload">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(150,230, 240);
+font: italic 14pt &quot;Californian FB&quot;;
+</string>
+                  </property>
+                  <property name="text">
+                   <string>Upload</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="path">
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QPushButton" name="save">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(150,230, 240);
+font: italic 14pt &quot;Californian FB&quot;;
+</string>
+                  </property>
+                  <property name="text">
+                   <string>Save</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QPushButton" name="clear">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(150,230, 240);
+font: italic 14pt &quot;Californian FB&quot;;
+</string>
+                  </property>
+                  <property name="text">
+                   <string>Clear</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QGroupBox" name="groupBox_7">
+               <property name="title">
+                <string/>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_7">
+                <item row="0" column="0">
+                 <widget class="QPushButton" name="encrypt">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(150,230, 240);
+font: italic 14pt &quot;Californian FB&quot;;
+</string>
+                  </property>
+                  <property name="text">
+                   <string>Encrypt</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QPushButton" name="decrypt">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(150,230, 240);
+font: italic 14pt &quot;Californian FB&quot;;
+</string>
+                  </property>
+                  <property name="text">
+                   <string>Decrypt</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="1">
+           <widget class="QScrollArea" name="scrollArea">
+            <property name="styleSheet">
+             <string notr="true">
+font: 20pt &quot;Bitstream Vera Serif&quot;;</string>
+            </property>
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>759</width>
+               <height>412</height>
+              </rect>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_4">
+              <item row="0" column="0">
+               <widget class="QPlainTextEdit" name="text">
+                <property name="styleSheet">
+                 <string notr="true">font: 20pt &quot;Liberation Serif&quot;;
+background-color: rgb(180, 213, 255);
+selection-background-color: rgb(98, 160, 234);
+</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>994</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
