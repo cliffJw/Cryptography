@@ -1,7 +1,14 @@
 import binascii
 from operator import ne
-import re
+import binascii
+import Cryptodome.Protocol.KDF
 
+
+def pass_2_key(password):
+    key = binascii.hexlify(Cryptodome.Protocol.KDF.PBKDF2(password, b'Be My Guest', 64))
+    key_bin = "{0:08b}".format(int(key, 32))
+    return key_bin
+    
 
 ########  OPERATION ON KEY #########
 def key_length_op(chunk, key_bin):
@@ -64,7 +71,7 @@ class Cliff:
         ########### To BINARY CONVERSION #####
         plain_txt_bin = to_bin_convertor(pt)
         print("Binary plaintext: ", plain_txt_bin)
-        passwd_bin = to_bin_convertor(encpasswd)
+        passwd_bin = pass_2_key(encpasswd)
         # print("Binary password: ", passwd_bin)
         
         len_pt_bin = len(plain_txt_bin)
@@ -129,7 +136,7 @@ class Cliff:
         return cipher_text  
 
     def decrypta(self, ct, passwd):
-        passwd_bin = to_bin_convertor(passwd)
+        passwd_bin = pass_2_key(passwd)
         ciph_txt_bin = bin(int(ct, 16))[2:]
         print("Cipher Text: ", ciph_txt_bin)
         infobits = ciph_txt_bin[len(ciph_txt_bin)-256:]
@@ -184,10 +191,6 @@ class Cliff:
         plain_text = message.decode("utf-8")
         print(f'Plain Text: {message} \nplain_text_utf8: {plain_text}')
         return plain_text
-
-
-
-
 
 
 # if __name__ == "__main__":
